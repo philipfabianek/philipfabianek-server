@@ -1,3 +1,14 @@
-# [START app_yaml]
+# bASIC
 runtime: nodejs
-vm: true
+env: flex
+
+# Skip uloading node_modules
+skip_files:
+- ^node_modules$
+
+# Handlers
+handlers:
+- url: ./
+  script: server/server-webpack.js
+  secure: always
+  redirect_http_response_code: 301
