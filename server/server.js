@@ -18,6 +18,27 @@ app.use("/assets", express.static(path.join(__dirname, "..", "assets")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// app.set("trust proxy", true);
+app.use((req, res, next) => {
+    if (req.get("host").indexOf("localhost") >= 0) {
+        next();
+    } else {
+        const redirectUrl = `https://www.philipfabianek.com/${req.url}`;
+
+        if (req.get("host").indexOf("www") >= 0) {
+            if (req.protocol == "https") {
+                next();
+            } else {
+                res.redirect(redirectUrl);
+                res.end();
+            }
+        } else {
+            res.redirect(redirectUrl);
+            res.end();
+        }
+    }
+});
+
 const renderPage = (req, res) => {
     const context = {};
 

@@ -4,11 +4,12 @@ env: flex
 
 # Skip uloading node_modules
 skip_files:
-- ^node_modules$
+- node_modules
+- source
 
-# Handlers
-handlers:
-- url: ./
-  script: server/server-webpack.js
-  secure: always
-  redirect_http_response_code: 301
+# # Handlers
+# handlers:
+# - url: /.*
+#   script: auto
+#   http_headers:
+#     X-Forwarded-Proto: https
