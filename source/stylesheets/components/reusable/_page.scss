@@ -1,0 +1,26 @@
+.page {
+    &__copyright {
+        color: $white;
+        font-family: Roboto, sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 145%;
+        margin: 0 15vw;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        max-width: 70vw;
+
+        bottom: 2rem;
+        position: absolute;
+
+        @include atSmall {
+            bottom: 2.4rem;
+        }
+
+        @include atMedium {
+            bottom: 2.8rem;
+        }
+    }
+}

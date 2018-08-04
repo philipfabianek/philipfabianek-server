@@ -1,0 +1,67 @@
+/////////////////////////////////////////////////
+// Base Specific Styles
+
+// Colors
+$white: #ffffff;
+$grey: #333333;
+$black: #000000;
+$light-white: #f9f9f9;
+
+// Body
+$body-default-text-color: $black;
+$body-default-background: #f9f9f9;
+$body-default-font-family: Raleway, sans-serif;
+
+// Spacing
+$space: 1.4rem;
+$large-space: 2.8rem;
+
+// Font sizes
+$base-font-size: 2.4rem;
+
+/////////////////////////////////////////////////
+// Reusable Component Specific Styles
+
+$wrapper-max-width: 80rem;
+
+/////////////////////////////////////////////////
+// Landing Page
+
+$main-color: #000f29;
+$landing-page-title: $main-color;
+$landing-page-subtitle: $main-color;
+$landing-page-button: $main-color;
+$landing-page-button-border: $main-color;
+$landing-page-button-hover-background: $main-color;
+$landing-page-button-hover-color: #fff;
+$landing-page-button-hover-scale: scale(1.23, 1.1);
+$landing-page-copyright: $main-color;
+
+$landing-page-option: $white;
+$landing-page-option-background: #131a29;
+$landing-page-option-hover-background: #050911;
+$landing-page-option-border-color: $white;
+
+/////////////////////////////////////////////////
+// About
+
+$about-title: $white;
+$about-top-background: #050911;
+
+/////////////////////////////////////////////////
+// Features
+
+$features-title: $white;
+$features-background: #050911;
+
+/////////////////////////////////////////////////
+// Portfolio
+
+$portfolio-title: $white;
+$portfolio-background: #050911;
+
+/////////////////////////////////////////////////
+// Contact
+
+$contact-title: $white;
+$contact-background: #050911;

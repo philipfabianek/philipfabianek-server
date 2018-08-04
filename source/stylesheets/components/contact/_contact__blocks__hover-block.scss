@@ -1,0 +1,293 @@
+.contact__blocks__hover-block {
+
+    background-color: $white;
+
+    @include atSmall {
+
+    }
+
+    @include atMedium {
+        background-color: #f1f1f1;
+        position: absolute;
+        // top: 9rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+        top: 0;
+
+        padding: 6rem 3rem;
+
+        visibility: hidden;
+        transform: translateX(-100%);
+        transition: transform .4s ease, visibility .4s ease;
+    }
+}
+
+.contact__blocks__block--toggled {
+    .contact__blocks__hover-block {
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+
+// .contact__blocks__block:hover, .contact__blocks__block:active {
+//     .contact__blocks__hover-block {
+//         transform: translateX(0);
+//         visibility: visible;
+//     }
+// }
+
+.contact__blocks__hover-block {
+    &__icon {
+        margin-top: 3rem;
+        max-width: 7rem;
+
+        @include atSmall {
+            max-width: 7.4rem;
+        }
+
+        @include atMedium {
+            margin-top: 0;
+            max-width: 8rem;
+        }
+
+        &--github {
+
+        }
+
+        &--linkedin {
+            max-width: 6.6rem;
+
+            @include atSmall {
+                max-width: 7.2rem;
+            }
+
+            @include atMedium {
+                max-width: 7.6rem;
+            }
+        }
+
+        &--skype {
+
+        }
+
+        &--twitter {
+            max-width: 7.5rem;
+
+            @include atSmall {
+                max-width: 7.9rem;
+            }
+
+            @include atMedium {
+                max-width: 8.5rem;
+            }
+        }
+
+        &--facebook {
+
+        }
+
+        &--email {
+            max-width: 8rem;
+
+            @include atSmall {
+                max-width: 8.8rem;
+            }
+
+            @include atMedium {
+                max-width: 9.6rem;
+            }
+        }
+    }
+
+    &__description {
+        font-size: 1.6rem;
+        letter-spacing: .5px;
+        line-height: 150%;
+        margin: 0 auto;
+        margin-top: 2.4rem;
+        padding: 0 1.6rem;
+
+        @include atSmall {
+            font-size: 1.8rem;
+            margin-top: 3.2rem;
+        }
+
+        @include atMedium {
+            margin-top: 0;
+            padding: 0 6rem;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(0rem);
+            width: 100%;
+        }
+    }
+
+    &__bold-text {
+        cursor: text;
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        user-select: text;
+
+        @media screen and (min-width: 350px) {
+            font-size: 1.8rem;
+            letter-spacing: .5px;
+            padding: 0 .8rem;
+        }
+
+        @media screen and (min-width: 400px) {
+            margin-top: 2.6rem;
+        }
+
+        @include atSmall {
+            font-size: 2rem;
+        }
+
+        @include atMedium {
+            bottom: 6rem;
+            font-size: 2rem;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+
+        @include atLarge {
+            font-size: 2.2rem;
+        }
+
+        &--larger {
+            font-size: 1.8rem;
+            letter-spacing: .5px;
+
+            @include atSmall {
+                font-size: 2rem;
+            }
+
+            @include atMedium {
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+    &__button {
+        background-color: #f9f9f9;
+        border: 1.5px solid #222;
+        color: #222;
+        display: inline-block;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.6rem;
+        letter-spacing: 1.5px;
+        margin: 0 2rem;
+        margin-top: 2.6rem;
+        padding: 1.2rem 2rem;
+        text-transform: uppercase;
+        transition: background-color .5s ease, color .5s ease;
+
+        &:hover {
+            background-color: #222;
+            color: $white;
+
+            a {
+                color: $white;
+            }
+        }
+
+        @include atSmall {
+            font-size: 1.8rem;
+            margin-top: 4rem;
+        }
+
+        @include atMedium {
+            background-color: #f1f1f1;
+            margin: 0;
+            position: absolute;
+        }
+
+        &--copy {
+
+            @include atSmall {
+
+            }
+
+            @include atMedium {
+                bottom: 3.6rem;
+                left: 2rem;
+            }
+
+            @media screen and (min-width: 850px) {
+                left: 3.2rem;
+            }
+
+            @media screen and (min-width: 900px) {
+                left: 4.6rem;
+            }
+
+            @media screen and (min-width: 950px) {
+                left: 6rem;
+            }
+
+            &:before {
+                color: #222;
+                content: "COPIED";
+                left: 0;
+                opacity: 1;
+                position: absolute;
+                text-align: center;
+                transform: translateY(-2rem);
+                visibility: hidden;
+                width: 100%;
+            }
+        }
+
+        &--visit {
+            margin-top: 1.8rem;
+
+            @include atSmall {
+
+            }
+
+            @include atMedium {
+                margin-top: 0;
+
+                bottom: 3.6rem;
+                right: 2rem;
+            }
+
+            @media screen and (min-width: 850px) {
+                right: 3.2rem;
+            }
+
+            @media screen and (min-width: 900px) {
+                right: 4.6rem;
+            }
+
+            @media screen and (min-width: 950px) {
+                right: 6rem;
+            }
+
+            a {
+                color: #222;
+                display: block;
+                transition: color .5s ease;
+            }
+        }
+
+        &--copied {
+            &:before {
+                opacity: 0;
+                transform: translateY(-6rem);
+                transition: transform .8s ease, opacity .8s ease;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__input {
+        opacity: 0;
+        position: absolute;
+        left: -1000rem;
+    }
+}

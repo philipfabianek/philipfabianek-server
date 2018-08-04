@@ -1,0 +1,18 @@
+.features__textbox {
+    background-color: $white;
+    box-shadow: .5rem .5rem 2rem .4rem $black;
+    display: inline-block;
+    padding: 2rem 3rem;
+
+    opacity: 0;
+    transform: translate(-2rem, -2rem);
+
+    p {
+        font-family: "Roboto";
+        font-size: 1.8rem;
+        letter-spacing: .5px;
+        line-height: 145%;
+        text-align: left;
+        text-transform: uppercase;
+    }
+}

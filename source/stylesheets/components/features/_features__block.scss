@@ -1,0 +1,16 @@
+.features__block {
+    background-color: transparent;
+    // border-bottom: 2rem solid #fff;
+    height: 50vh;
+    min-height: 50rem;
+
+    &--visible {
+        // background-color: $white;
+        // transition: background-color .8s ease;
+        .features__textbox {
+            opacity: 1;
+            transform: translate(-2rem, 0);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+    }
+}

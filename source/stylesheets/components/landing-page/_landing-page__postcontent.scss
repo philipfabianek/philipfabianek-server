@@ -1,0 +1,204 @@
+.landing-page__postcontent {
+
+    &__options {
+        min-height: 40rem;
+        height: 100vh;
+        position: relative;
+        width: 100vw;
+
+        @include atMedium {
+            min-height: 30rem;
+        }
+    }
+
+    &__option {
+        align-items: center;
+        background-color: $landing-page-option-background;
+        cursor: pointer;
+        display: flex;
+        min-height: 10rem;
+        height: 25vh;
+        justify-content: space-around;
+        position: absolute;
+        text-align: center;
+        transform: scale(0);
+        transition: background-color .8s ease, transform 1.6s ease;
+        width: 100vw;
+        z-index: 100;
+
+        @include atMedium {
+            min-height: 15rem;
+            height: 50vh;
+            width: 50vw;
+        }
+
+        &:hover, &:focus, &:active {
+            background-color: $landing-page-option-hover-background;
+        }
+
+        * {
+            cursor: pointer;
+        }
+
+        h3 {
+            color: $landing-page-option;
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            width: 100%;
+
+            @include atSmall {
+                font-size: 2rem;
+            }
+
+            @include atLarge {
+                font-size: 2.2rem;
+            }
+        }
+
+
+
+        &__1 {
+            top: 0;
+            border-bottom: 2px solid $landing-page-option-border-color;
+
+            @include atSmall {
+
+            }
+
+            @include atMedium {
+                left: 0;
+                top: 0;
+                transform-origin: 100% 100%;
+
+                margin-left: -2px;
+                margin-top: -2px;
+                border: none;
+
+                // border: 2px solid $landing-page-option-border-color;
+                // border-left: none;
+                // border-top: none;
+            }
+        }
+
+        &__2 {
+            border-bottom: 2px solid $landing-page-option-border-color;
+            top: 25%;
+
+            @include atSmall {
+
+            }
+
+            @include atMedium {
+                right: 0;
+                top: 0;
+                transform-origin: 0 100%;
+
+                margin-right: -2px;
+                margin-top: -2px;
+                border: none;
+
+                // border: 2px solid $landing-page-option-border-color;
+                // border-right: none;
+                // border-top: none;
+            }
+        }
+
+        &__3 {
+            border-bottom: 2px solid $landing-page-option-border-color;
+            top: 50%;
+
+            @include atSmall {
+
+            }
+
+            @include atMedium {
+                left: 0;
+                bottom: 0;
+                transform-origin: 100% 0;
+
+                margin-left: -2px;
+                margin-top: 2px;
+                border: none;
+
+                // border: 2px solid $landing-page-option-border-color;
+                // border-bottom: none;
+                // border-left: none;
+            }
+        }
+
+        &__4 {
+            top: 75%;
+
+            @include atSmall {
+
+            }
+
+            @include atMedium {
+                right: 0;
+                bottom: 0;
+                transform-origin: 0 0;
+
+                top: 50%;
+                margin-right: -2px;
+                margin-top: 2px;
+                border: none;
+
+                // border: 2px solid $landing-page-option-border-color;
+                // border-bottom: none;
+                // border-right: none;
+            }
+        }
+
+        &--visible {
+            transform: scale(1);
+        }
+
+        // &--choosed {
+        //     background-color: #090909;
+        //     border: none;
+        //     cursor: default;
+        //
+        //     height: 100vh;
+        //     top: 0;
+        //     transition: height 1.2s ease, top 1.2s ease;
+        //
+        //     z-index: 101;
+        //
+        //     @include atSmall {
+        //
+        //     }
+        //
+        //     @include atMedium {
+        //         height: 50vh;
+        //         top: 50%;
+        //         transition: transform 1.2s ease;
+        //         transform: scale(2);
+        //     }
+        //
+        //     &--1 {
+        //         top: 0;
+        //         transform-origin: 0 0;
+        //     }
+        //
+        //     &--2 {
+        //         top: 0;
+        //         transform-origin: 100% 0;
+        //     }
+        //
+        //     &--3 {
+        //         transform-origin: 0 100%;
+        //     }
+        //
+        //     &--4 {
+        //         transform-origin: 100% 100%;
+        //     }
+        // }
+        //
+        // &--not-choosed {
+        //     opacity: 0;
+        //     transition: opacity 1s ease;
+        // }
+    }
+}

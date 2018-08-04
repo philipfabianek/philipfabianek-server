@@ -1,0 +1,83 @@
+.contact__blocks {
+    margin: 0 auto;
+    margin-top: 4.6rem;
+    width: 100%;
+    max-width: 120rem;
+
+    @include atSmall {
+        margin-top: 5.8rem;
+    }
+
+    @include atMedium {
+        margin-top: 7.2rem;
+    }
+
+    @include atLarge {
+        margin-top: 8.6rem;
+    }
+
+    &__block {
+        & {
+            background-color: $white;
+            // cursor: pointer;
+            display: inline-block;
+            // height: 40rem;
+            margin-top: 1rem;
+            opacity: 0;
+            overflow: hidden;
+            padding: 2rem 2rem 3rem 2rem;
+            transform: translateY(-1rem);
+            transition: opacity .6s ease, transform .6s ease, visibility .6s ease;
+            vertical-align: top;
+            visibility: hidden;
+            width: 90%;
+
+            @include atSmall {
+
+            }
+
+            @include atMedium {
+                height: 40rem;
+                margin: .6rem .3rem 0 .3rem;
+                width: 48%;
+            }
+
+            @include atLarge {
+
+            }
+        }
+
+        // * {
+        //     cursor: pointer;
+        // }
+
+        &--visible {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+
+        &__title {
+            font-family: "Roboto", sans-serif;
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            margin-top: 1rem;
+            text-transform: uppercase;
+
+            @include atSmall {
+
+            }
+
+            @include atMedium {
+                font-size: 2.8rem;
+                letter-spacing: 2px;
+                margin-top: 3rem;
+            }
+
+            @include atLarge {
+
+            }
+        }
+    }
+}

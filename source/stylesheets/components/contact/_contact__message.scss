@@ -1,0 +1,81 @@
+.contact__message {
+    margin-top: 4rem;
+
+    form {
+
+        input, textarea {
+            border: 1px solid #111;
+            cursor: text;
+            display: block;
+            font-size: 2rem;
+            line-height: 150%;
+            margin: 0 auto;
+            margin-top: .2rem;
+            padding: 1rem 1.4rem;
+            max-width: 116rem;
+            width: 90%;
+
+            @include atMedium {
+                width: 97%;
+            }
+        }
+
+        input {
+
+        }
+
+        textarea {
+            height: 20rem;
+            padding: 1rem 1.4rem;
+            resize: none;
+
+        }
+    }
+
+    &__button {
+        background-color: $white;
+        border: 1px solid #111;
+        cursor: pointer;
+        font-family: "Roboto", sans-serif;
+        font-size: 2.2rem;
+        letter-spacing: 1.5px;
+        margin-top: .2rem;
+        padding: 2rem 1.4rem;
+        position: relative;
+        text-transform: uppercase;
+        transition: background-color .4s ease, border-color .4s ease, color .4s ease;
+        width: 90%;
+        max-width: 60rem;
+
+        &:hover {
+            background-color: #008BD2;
+            // border-color: $white;
+            color: $white;
+        }
+
+        &:before {
+            content: "SUCCESS";
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            padding: 1.4rem 0;
+
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity .6s ease, transform .6s ease;
+            visibility: hidden;
+        }
+
+        &--sent {
+            &:before {
+                opacity: 0;
+                transform: translateY(-2rem);
+                visibility: visible;
+            }
+        }
+    }
+}

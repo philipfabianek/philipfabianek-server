@@ -1,0 +1,75 @@
+.features__box {
+    background-color: $white;
+    border-radius: 1rem;
+    box-shadow: .5rem .5rem 3rem 1rem $black;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 12rem 2rem;
+
+    margin-right: 100vw;
+    transition: margin .8s ease;
+
+    &--visible {
+        margin-right: 0;
+    }
+
+    &__container {
+        margin: 0 auto;
+        margin-top: 8rem;
+        width: 93%;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: opacity .5s ease, transform .5s ease;
+
+        opacity: 0;
+        transform: translateY(-2rem);
+
+        &--visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &__description {
+        font-weight: 600;
+        font-size: 2.2rem;
+        letter-spacing: .5px;
+        line-height: 145%;
+        margin: 0 auto;
+        margin-top: 3.6rem;
+        max-width: 60vw;
+        transition: opacity .5s ease, transform .5s ease;
+
+        opacity: 0;
+        transform: translateY(-2rem);
+
+        &--visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &__boi {
+        font-weight: 600;
+        font-size: 1.8rem;
+        letter-spacing: .5px;
+        line-height: 145%;
+        margin: 0 auto;
+        margin-top: 3rem;
+        max-width: 60vw;
+        transition: opacity .5s ease, transform .5s ease;
+
+        opacity: 0;
+        transform: translateY(-1rem);
+
+        &--visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

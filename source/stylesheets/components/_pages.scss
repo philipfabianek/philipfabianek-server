@@ -1,0 +1,39 @@
+.pages {
+
+
+    &__page {
+        position: absolute;
+        width: 100vw;
+
+        &--transition {
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 1;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                background-color: transparent;
+            }
+        }
+
+        &--about {
+            left: 0;
+        }
+
+        &--features {
+            left: 100vw;
+        }
+
+        &--portfolio {
+            left: 200vw;
+        }
+
+        &--contact {
+            left: 300vw;
+        }
+    }
+}
